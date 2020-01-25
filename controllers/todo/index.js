@@ -12,16 +12,16 @@ module.exports = models => {
         priority: req.body.priority,
         dueDate: req.body.dueDate
       })
-      .then(todo => res.status(201).json(todo.serialize()));
-  //   .catch(err => {
-  //     if (err.message === "That username already exists") {
-  //       return models.users
-  //         .get({ username: req.body.username })
-  //         .then(user => res.status(200).json(user.serialize()));
-  //     }
+      .then(todo => res.status(201).json(todo.serialize()))
+      .catch(err => {
+        if (err.message === "That title already exists") {
+          return models.todos
+            .get({ title: req.body.title })
+            .then(todo => res.status(200).json(todo.serialize()));
+        }
 
-  //     return res.status(400).send(err.message);
-  //   });
+        return res.status(400).send(err.message);
+      });
 
   const listTodos = (req, res) =>
     models.todos
@@ -39,7 +39,13 @@ module.exports = models => {
 
   const updateTodo = (req, res) =>
     models.todos
-      .update({ id: req.params.id, description: req.body.description })
+      .update({
+        id: req.params.id,
+        title: req.body.title,
+        description: req.body.description,
+        priority: req.body.priority,
+        dueDate: req.body.dueDate
+      })
       .then(todo => todo.serialize())
       .then(todo => res.status(200).json(todo))
       .catch(err => res.status(400).send(err.message));

@@ -9,7 +9,7 @@ module.exports = (knex, Todo) => {
       .insert({ title, description, priority, due_date: dueDate })
       .then(() => {
         return knex("todos")
-          .where({ title, description, priority })
+          .where({ title })
           .select();
       })
       .then(todos => new Todo(todos.pop()))
@@ -19,7 +19,7 @@ module.exports = (knex, Todo) => {
           err.message.match("duplicate key value") ||
           err.message.match("UNIQUE constraint failed")
         )
-          return Promise.reject(new Error("That todo already exists"));
+          return Promise.reject(new Error("That title already exists"));
         // throw unknown errors
         return Promise.reject(err);
       });

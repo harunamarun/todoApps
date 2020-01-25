@@ -2,7 +2,9 @@ exports.up = function(knex, Promise) {
   return knex.schema.createTable("todos", t => {
     t.increments().index();
 
-    t.string("title", 30).notNullable();
+    t.string("title", 30)
+      .unique()
+      .notNullable();
 
     t.text("description");
 

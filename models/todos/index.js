@@ -6,7 +6,7 @@ const Todo = function(dbTodo) {
   this.description = dbTodo.description;
   this.priority = dbTodo.priority;
   this.dueDate = new Date(dbTodo.due_date);
-  this.createdAt = new Date(dbTodo.created_at);
+  this.updatedAt = new Date(dbTodo.updated_at);
 };
 
 Todo.prototype.serialize = function() {
@@ -15,8 +15,8 @@ Todo.prototype.serialize = function() {
     title: this.title,
     description: this.description,
     priority: this.priority,
-    dueDate: moment(this.dueDate).format("hh:mm:ss"),
-    createdAt: moment(this.createdAt).format("hh:mm:ss")
+    dueDate: moment(this.dueDate).format("YYYY-MM-DD hh:mm:ss"),
+    updatedAt: moment(this.updatedAt).format("YYYY-MM-DD hh:mm:ss")
   };
 };
 
