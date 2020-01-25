@@ -30,6 +30,12 @@ module.exports = models => {
       .then(todos => res.status(200).json(todos))
       .catch(err => res.status(400).send(err.message));
 
+  const getTodo = (req, res) =>
+    models.todos
+      .get({ id: req.params.id })
+      .then(todo => todo.serialize())
+      .then(todo => res.status(200).json(todo))
+      .catch(err => res.status(400).send(err.message));
   //   const getUserMessages = (req, res) =>
   //     models.userMessages
   //       .list({ toId: req.params.id, fromId: req.query.fromId })
@@ -54,7 +60,7 @@ module.exports = models => {
   const router = express.Router();
   router.post("/", createTodo);
   router.get("/", listTodos);
-  //   router.get("/:id/messages", getUserMessages);
+  router.get("/:id/", getTodo);
   //   router.post("/:id/messages", createUserMessage);
 
   return router;

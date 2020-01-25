@@ -23,7 +23,7 @@ Todo.prototype.serialize = function() {
 module.exports = knex => {
   return {
     create: require("./create")(knex, Todo),
-    list: require("./list")(knex, Todo)
-    //    get: require("./get")(knex, Todo)
+    list: require("./list")(knex, Todo),
+    get: require("./get")(knex, Todo)
   };
 };
