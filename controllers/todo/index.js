@@ -44,6 +44,12 @@ module.exports = models => {
       .then(todo => res.status(200).json(todo))
       .catch(err => res.status(400).send(err.message));
 
+  const deleteTodo = (req, res) =>
+    models.todos
+      .delete({ id: req.params.id })
+      .then(() => res.send("ok"))
+      .catch(err => res.status(400).send(err.message));
+
   /**
    * Routes
    */
@@ -52,6 +58,7 @@ module.exports = models => {
   router.get("/", listTodos);
   router.get("/:id/", getTodo);
   router.patch("/:id/", updateTodo);
+  router.delete("/:id/", deleteTodo);
 
   return router;
 };

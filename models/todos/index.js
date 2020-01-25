@@ -25,6 +25,7 @@ module.exports = knex => {
     create: require("./create")(knex, Todo),
     list: require("./list")(knex, Todo),
     get: require("./get")(knex, Todo),
-    update: require("./update")(knex, Todo)
+    update: require("./update")(knex, Todo),
+    delete: require("./delete")(knex, Todo)
   };
 };
