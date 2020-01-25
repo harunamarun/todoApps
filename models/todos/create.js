@@ -12,7 +12,7 @@ module.exports = (knex, Todo) => {
           .where({ title, description, priority })
           .select();
       })
-      .then(todos => new Todo(todos.pop())) // create a user model out of the plain database response
+      .then(todos => new Todo(todos.pop()))
       .catch(err => {
         // sanitize known errors
         if (
@@ -20,7 +20,6 @@ module.exports = (knex, Todo) => {
           err.message.match("UNIQUE constraint failed")
         )
           return Promise.reject(new Error("That todo already exists"));
-
         // throw unknown errors
         return Promise.reject(err);
       });
