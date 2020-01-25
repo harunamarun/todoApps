@@ -1,0 +1,21 @@
+{
+  "name": "TodoApp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "migrate": "knex migrate:latest --knexfile models/knexfile.js",
+    "rollback": "knex migrate:rollback --knexfile models/knexfile.js "
+  },
+  "author": "haruna",
+  "license": "MIT",
+  "dependencies": {
+    "eslint": "^6.8.0",
+    "express": "^4.17.1",
+    "knex": "^0.20.8",
+    "moment": "^2.24.0",
+    "morgan": "^1.9.1",
+    "pg": "^7.17.1",
+    "prettier": "^1.19.1"
+  }
+}
