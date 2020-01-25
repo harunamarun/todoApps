@@ -36,23 +36,13 @@ module.exports = models => {
       .then(todo => todo.serialize())
       .then(todo => res.status(200).json(todo))
       .catch(err => res.status(400).send(err.message));
-  //   const getUserMessages = (req, res) =>
-  //     models.userMessages
-  //       .list({ toId: req.params.id, fromId: req.query.fromId })
-  //       .then((messages) => messages.map((msg) => msg.serialize()))
-  //       .then((messages) => res.status(200).json(messages))
-  //       .catch((err) => res.status(400).send(err.message));
 
-  //   const createUserMessage = (req, res) =>
-  //     models.userMessages
-  //       .create({
-  //         toId: req.params.id,
-  //         fromId: req.body.fromId,
-  //         message: req.body.message,
-  //       })
-  //       .then((messages) => messages.map((msg) => msg.serialize()))
-  //       .then((messages) => res.status(200).json(messages))
-  //       .catch((err) => res.status(400).send(err.message));
+  const updateTodo = (req, res) =>
+    models.todos
+      .update({ id: req.params.id, description: req.body.description })
+      .then(todo => todo.serialize())
+      .then(todo => res.status(200).json(todo))
+      .catch(err => res.status(400).send(err.message));
 
   /**
    * Routes
@@ -61,7 +51,7 @@ module.exports = models => {
   router.post("/", createTodo);
   router.get("/", listTodos);
   router.get("/:id/", getTodo);
-  //   router.post("/:id/messages", createUserMessage);
+  router.patch("/:id/", updateTodo);
 
   return router;
 };
