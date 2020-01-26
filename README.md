@@ -110,6 +110,8 @@ responce (updated todo item)
 
 ### DELETE /api/todos/:id
 
+Delete todo-item
+
 responce (result of operation)
 
 ```
