@@ -31,7 +31,7 @@ request params
 }
 ```
 
-responce (created todo item)
+response (created todo item)
 
 ```
 {
@@ -48,7 +48,7 @@ responce (created todo item)
 
 Return todo list.
 
-responce (list of todo item)
+response (list of todo item)
 
 ```
 [{
@@ -67,7 +67,7 @@ responce (list of todo item)
 
 Return the todo-item with the given id.
 
-responce
+response
 
 ```
 {
@@ -95,7 +95,7 @@ request params
 }
 ```
 
-responce (updated todo item)
+response (updated todo item)
 
 ```
 {
@@ -112,7 +112,7 @@ responce (updated todo item)
 
 Delete todo-item
 
-responce (result of operation)
+response (result of operation)
 
 ```
 "OK"
