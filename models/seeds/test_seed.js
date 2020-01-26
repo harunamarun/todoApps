@@ -6,22 +6,22 @@ exports.seed = function(knex) {
       // Inserts seed entries
       return knex("todos").insert([
         {
-          title: "title1",
-          description: "description1",
-          priority: "middle",
-          due_date: "2020-02-11 02:11:11"
-        },
-        {
-          title: "title2",
-          description: "description2",
+          title: "Survive CodeChrysalis",
+          description: "write code, write code, write code!!",
           priority: "high",
-          due_date: "2020-02-12 02:11:11"
+          due_date: "2020-03-27 02:11:11"
         },
         {
-          title: "title3",
-          description: "description3",
-          priority: "low",
-          due_date: "2020-02-13 02:11:11"
+          title: "Get job",
+          description: "get gooooood job!",
+          priority: "high",
+          due_date: "2020-04-30 02:11:11"
+        },
+        {
+          title: "Earn money",
+          description: "Earn money for good life.",
+          priority: "high",
+          due_date: "2020-05-31 02:11:11"
         }
       ]);
     });
