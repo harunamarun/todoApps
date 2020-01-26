@@ -21,11 +21,16 @@ const app = express();
 // 1. log every request when it comes in
 app.use(morgan("dev"));
 
-// 3. Parse request bodies as json
+// 2. Parse request bodies as json
 app.use(bodyParser.json({ type: "application/json", limit: "50mb" }));
 
-// 4. If the requests begin with '/api', hand them off to the API router
+// 3. If the requests begin with '/api', hand them off to the API router
 app.use("/api", apiRouter);
+app.use(
+  "/todos/:id",
+  express.static(`${__dirname}/public/todos/todo_detail.html`)
+); // otherwise load the client app
+app.use(express.static(`${__dirname}/public`)); // otherwise load the client app
 
 app.use((err, req, res, next) => {
   if (err.stack) {
