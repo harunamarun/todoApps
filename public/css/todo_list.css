@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #e9ebee;
+  padding-top: 42px;
+}
+header {
+  height: 42px;
+  background: linear-gradient(-135deg, #e4a972, #9941d8);
+  color: #fff;
+  position: fixed;
+  display: flex;
+  width: 100%;
+  min-width: 500px;
+  top: 0;
+}
+header h1 {
+  margin: auto;
+  order: 2;
+  width: 50%;
+  text-align: center;
+}
+header div {
+  width: 25%;
+  order: 3;
+  text-align: right;
+  padding: 6px 10px;
+}
+
+header span {
+  margin: auto 10px;
+  order: 1;
+  width: 25%;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.column {
+  height: 100vh;
+  width: 100%;
+}
+
+#post-form {
+  width: 550px;
+  text-align: center;
+  margin: auto;
+  border-right: 1px solid #aaaaaa;
+  padding: 10px 10px;
+}
+#description-text {
+  width: 96%;
+  height: 100px;
+  margin: 10px;
+}
+#title-text {
+  width: 96%;
+  margin: 10px;
+}
+label {
+  font-size: 16px;
+}
+
+#priority-wrapper {
+  display: block;
+}
+
+#priority-select {
+  font-size: 14px;
+}
+
+#due-date {
+  margin: 10px;
+}
+#post-btn {
+  font-size: 16px;
+  width: 96%;
+  height: 30px;
+  margin: 10px;
+}
+
+#todo_list {
+  text-align: center;
+}
+
+.todo {
+  width: 70%;
+  background: #fff;
+  margin: 10px auto;
+  border: 1px solid #aaaaaa;
+  border-radius: 3px;
+  padding: 12px;
+  word-break: break-all;
+}
+
+.title {
+  margin: 5px 0;
+  font-size: 30px;
+}
+.duedate {
+  margin: 5px 0;
+}
+.priority {
+  margin: 5px 0;
+}

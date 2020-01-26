@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ToDo</title>
+    <script src="http://localhost:3000/js/todo_list.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/todo_list.css" />
+  </head>
+
+  <body>
+    <header id="header-container">
+      <h1>ToDo List</h1>
+    </header>
+
+    <div class="wrapper">
+      <div class="column" id="post-form">
+        <form>
+          <div class="post-content">
+            <label for="create-title">Title</label>
+            <input id="title-text" name="title" />
+
+            <label for="create-description">Description</label>
+            <textarea id="description-text" name="description"></textarea>
+
+            <label for="due_date">Due date:</label>
+            <input
+              type="date"
+              name="due_date"
+              id="due-date"
+              value="2020-02-16"
+            />
+
+            <div id="priority-wrapper">
+              <label for="priority">Priority:</label>
+              <select id="priority-select" name="priority">
+                <option value="A">low</option>
+                <option value="A">middle</option>
+                <option value="A">hight</option>
+              </select>
+            </div>
+          </div>
+        </form>
+        <button id="post-btn">Add ToDo</button>
+      </div>
+
+      <div class="column" id="todo_list"></div>
+    </div>
+  </body>
+</html>
