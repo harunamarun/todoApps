@@ -27,7 +27,7 @@ async function showList() {
 
     const todoDeleteBtn = document.createElement("button");
     todoDeleteBtn.className = "todo-delete-btn";
-    todoDeleteBtn.innerText = "delete";
+    todoDeleteBtn.innerText = `DELETE (api/todo/:id)`;
     todoDeleteBtn.id = post.id;
 
     const todoContainer = document.createElement("div");
