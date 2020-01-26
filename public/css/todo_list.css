@@ -40,14 +40,13 @@ header span {
 }
 
 .column {
-  height: 100vh;
   width: 100%;
 }
 
 #post-form {
   width: 550px;
   text-align: center;
-  margin: auto;
+  margin: 10px auto;
   border-right: 1px solid #aaaaaa;
   padding: 10px 10px;
 }
