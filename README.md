@@ -18,7 +18,7 @@ Check<br>
 
 ### POST /api/todos
 
-Creates todo.
+Create todo.
 
 request params
 
@@ -46,7 +46,7 @@ responce (created todo item)
 
 ### GET /api/todos
 
-Returns todo list.
+Return todo list.
 
 responce (list of todo item)
 
@@ -65,7 +65,7 @@ responce (list of todo item)
 
 ### GET /api/todos/:id
 
-Returns the todo-item with the given id.
+Return the todo-item with the given id.
 
 responce
 
