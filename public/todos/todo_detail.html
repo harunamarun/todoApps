@@ -6,8 +6,36 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
     <script src="http://localhost:3000/js/todo_detail.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/todo_detail.css" />
   </head>
+
   <body>
-    underTodoDeaitl
+    <header id="header-container">
+      <h1>ToDo List</h1>
+    </header>
+    <div class="column" id="post-form">
+      <form>
+        <div class="post-content">
+          <label for="create-title">Title</label>
+          <input id="title-text" name="title" />
+
+          <label for="create-description">Description</label>
+          <textarea id="description-text" name="description"></textarea>
+
+          <label for="due_date">Due date:</label>
+          <input type="date" name="due_date" id="due-date" value="2020-02-16" />
+
+          <div id="priority-wrapper">
+            <label for="priority">Priority:</label>
+            <select id="priority-select" name="priority">
+              <option value="low">low</option>
+              <option value="middle">middle</option>
+              <option value="high">high</option>
+            </select>
+          </div>
+        </div>
+        <button id="save-btn">Save ToDo</button>
+      </form>
+    </div>
   </body>
 </html>

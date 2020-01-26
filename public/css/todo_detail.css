@@ -85,7 +85,7 @@ label {
   text-align: center;
 }
 
-.todo-card {
+.todo {
   display: block;
   width: 70%;
   background: #fff;
@@ -96,13 +96,6 @@ label {
   word-break: break-all;
 }
 
-.todo-container {
-  display: flex;
-}
-
-.todo-delete-btn {
-  height: 30px;
-}
 .title {
   margin: 5px 0;
   font-size: 30px;
