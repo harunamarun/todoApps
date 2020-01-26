@@ -18,7 +18,7 @@ Check<br>
 
 ### POST /api/todos
 
-Creates todo.
+Create todo.
 
 request params
 
@@ -31,7 +31,7 @@ request params
 }
 ```
 
-responce (created todo item)
+response (created todo item)
 
 ```
 {
@@ -46,9 +46,9 @@ responce (created todo item)
 
 ### GET /api/todos
 
-Returns todo list.
+Return todo list.
 
-responce (list of todo item)
+response (list of todo item)
 
 ```
 [{
@@ -65,9 +65,9 @@ responce (list of todo item)
 
 ### GET /api/todos/:id
 
-Returns the todo-item with the given id.
+Return the todo-item with the given id.
 
-responce
+response
 
 ```
 {
@@ -95,7 +95,7 @@ request params
 }
 ```
 
-responce (updated todo item)
+response (updated todo item)
 
 ```
 {
@@ -110,7 +110,9 @@ responce (updated todo item)
 
 ### DELETE /api/todos/:id
 
-responce (result of operation)
+Delete todo-item
+
+response (result of operation)
 
 ```
 "OK"
