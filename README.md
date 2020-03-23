@@ -1,6 +1,6 @@
 # ToDoList API
 
-This was created during my time as a student at Code Chrysalis.<br>
+"This was created during my time as a student at <a href=https://www.codechrysalis.io/>Code Chrysalis</a>."  <br>
 This offers API of ToDoList and includes HTML which is Example of use.
 
 ## Setup
